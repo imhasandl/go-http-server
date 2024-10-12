@@ -1,9 +1,3 @@
-// Assignment
-// In this course, we'll be working on a product called "Chirpy". Chirpy is a social network similar to Twitter.
-
-// One of Chirpy's servers is processing requests unbelievably slowly. Use a goroutine to fix the bug in the handleRequests (not handleRequest) function. The server should be able to process all the requests within the time limit.
-
-
 package main
 
 import (
