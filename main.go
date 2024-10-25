@@ -6,10 +6,8 @@ import (
 	"net/http"
 	"os"
 	"sync/atomic"
-	
 
-	//Fix bug cant find the the db files
-	"mod/internal/database"
+	"github.com/imhasandl/go-http-server/internal/database"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
