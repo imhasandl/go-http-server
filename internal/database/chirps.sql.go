@@ -14,22 +14,23 @@ import (
 const createChirp = `-- name: CreateChirp :one
 INSERT INTO chirps (id, created_at, updated_at, body, user_id)
 VALUES (
-    gen_random_uuid(),
-    NOW(),
-    NOW(),
     $1,
-    $2
+    NOW(),
+    NOW(),
+    $2,
+    $3
 )
 RETURNING id, created_at, updated_at, body, user_id
 `
 
 type CreateChirpParams struct {
+	ID     uuid.UUID
 	Body   string
 	UserID uuid.UUID
 }
 
 func (q *Queries) CreateChirp(ctx context.Context, arg CreateChirpParams) (Chirp, error) {
-	row := q.db.QueryRowContext(ctx, createChirp, arg.Body, arg.UserID)
+	row := q.db.QueryRowContext(ctx, createChirp, arg.ID, arg.Body, arg.UserID)
 	var i Chirp
 	err := row.Scan(
 		&i.ID,
