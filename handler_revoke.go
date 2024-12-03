@@ -34,7 +34,7 @@ func (cfg *apiConfig) handlerRefresh(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, response{
+	respondWithJSON(w, http.StatusNoContent, response{
 		Token: accessToken,
 	})
 }
