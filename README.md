@@ -18,7 +18,7 @@
 * **Authorization:** `Bearer <user_token>` (for user-related endpoints)
 * **Authorization:** `ApiKey <your_api_key>` (for webhook endpoint)
 
-**Query Parameters**
+**Chirps Path Query Parameters**
 
 * **sort:** `asc` (ascending), `desc` (descending)
 * **author_id:** ID of the user to filter chirps by
