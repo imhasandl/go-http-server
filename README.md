@@ -1,3 +1,35 @@
+## Project Setup
+
+**1. Prerequisites**
+
+* **Go:** Ensure you have Go installed and configured on your system.
+* **PostgreSQL:** Install and set up a PostgreSQL database.
+
+**2. Project Initialization**
+
+```bash
+go mod init 
+```
+
+**3. Install Dependencies**
+
+```
+go get -u [github.com/lib/pq](https://github.com/lib/pq) # PostgreSQL driver
+go get -u [invalid URL removed] # PostgreSQL driver (alternative)
+```
+
+**4. Install Goose Database Migration**
+
+```
+go install github.com/pressly/goose/v3/cmd/goose@latest
+```
+
+**5. Install sqlc (SQL Code Generation)**
+
+```
+go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
+```
+
 ## API Endpoints
 
 * **`/api/healthz`** (GET): Checks API health.
