@@ -14,7 +14,7 @@ go mod init
 **3. Install Dependencies**
 
 ```
-go get -u [github.com/lib/pq](https://github.com/lib/pq) # PostgreSQL driver
+o get github.com/lib/pq # PostgreSQL driver
 ```
 
 **4. Install Goose Database Migration**
