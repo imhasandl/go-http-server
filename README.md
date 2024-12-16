@@ -15,7 +15,6 @@ go mod init
 
 ```
 go get -u [github.com/lib/pq](https://github.com/lib/pq) # PostgreSQL driver
-go get -u [invalid URL removed] # PostgreSQL driver (alternative)
 ```
 
 **4. Install Goose Database Migration**
